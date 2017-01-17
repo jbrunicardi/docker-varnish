@@ -3,6 +3,7 @@ MAINTAINER jbrunicardi@gmail.com
 
 RUN yum update -y && \
   yum install -y epel-release && \
+  rpm --nosignature -i https://repo.varnish-cache.org/pkg/5.0.0/varnish-5.0.0-1.el7.x86_64.rpm && \
   yum install -y varnish && \
   yum install -y libmhash-devel && \
   yum install -y vixie-cron crontabs && \  
