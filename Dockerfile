@@ -5,9 +5,9 @@ RUN yum update -y && \
   yum install -y epel-release && \
   yum install -y libmhash-devel && \
   yum install -y vixie-cron crontabs && \  
-  curl -LO https://repo.varnish-cache.org/pkg/5.0.0/varnish-5.0.0-1.el7.x86_64.rpm && \
-  yum localinstall -y varnish-5.0.0-1.el7.x86_64.rpm && \
-  rm -f varnish-5.0.0-1.el7.x86_64.rpm && \
+  curl -LO https://packagecloud.io/varnishcache/varnish5/packages/el/7/varnish-5.1.1-1.el7.x86_64.rpm && \
+  yum localinstall -y varnish-5.1.1-1.el7.x86_64.rpm && \
+  rm -f varnish-5.1.1-1.el7.x86_64.rpm && \
   curl -LO https://download.elastic.co/beats/filebeat/filebeat-1.2.3-x86_64.rpm && \
   yum localinstall -y filebeat-1.2.3-x86_64.rpm && \
   rm -f filebeat-1.2.3-x86_64.rpm && \
