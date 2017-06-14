@@ -1,13 +1,13 @@
-FROM million12/centos-supervisor:latest
+FROM jbrunicardi/centos-supervisor:latest
 MAINTAINER jbrunicardi@gmail.com
 
 RUN yum update -y && \
   yum install -y epel-release && \
   yum install -y libmhash-devel && \
   yum install -y vixie-cron crontabs && \  
-  curl -L https://packagecloud.io/varnishcache/varnish5/packages/el/7/varnish-5.1.1-1.el7.x86_64.rpm/download > varnish-5.1.1-1.el7.x86_64.rpm && \
-  yum localinstall -y varnish-5.1.1-1.el7.x86_64.rpm && \
-  rm -f varnish-5.1.1-1.el7.x86_64.rpm && \
+  curl -L https://packagecloud.io/varnishcache/varnish5/packages/el/7/varnish-5.1.2-1.el7.x86_64.rpm/download > varnish-5.1.2-1.el7.x86_64.rpm && \
+  yum localinstall -y varnish-5.1.2-1.el7.x86_64.rpm && \
+  rm -f varnish-5.1.2-1.el7.x86_64.rpm && \
   curl -LO https://download.elastic.co/beats/filebeat/filebeat-1.2.3-x86_64.rpm && \
   yum localinstall -y filebeat-1.2.3-x86_64.rpm && \
   rm -f filebeat-1.2.3-x86_64.rpm && \
