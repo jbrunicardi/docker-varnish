@@ -1,4 +1,4 @@
-FROM jbrunicardi/centos-supervisor:latest
+FROM jbrunicardi/docker-centos-supervisor:latest
 MAINTAINER jbrunicardi@gmail.com
 
 RUN yum update -y && \
